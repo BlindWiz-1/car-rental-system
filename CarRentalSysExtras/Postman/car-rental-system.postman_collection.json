@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "b85a7217-a46b-4dd8-a18c-c0e81b3a78ce",
+		"name": "car-rental-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get cars rented this month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rentedCars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rentedCars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cars that need insurance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carsNeedInsurance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carsNeedInsurance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customers info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get car of type in need of revision",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carsOfTypeNeedRevision/Renault",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carsOfTypeNeedRevision",
+						"Renault"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
