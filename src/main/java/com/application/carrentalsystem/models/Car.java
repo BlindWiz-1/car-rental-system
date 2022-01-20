@@ -87,10 +87,6 @@ public class Car {
         return carId;
     }
 
-    public void setCarId(int carId) {
-        this.carId = carId;
-    }
-
     public Date getRevisionDate() {
         return revisionDate;
     }

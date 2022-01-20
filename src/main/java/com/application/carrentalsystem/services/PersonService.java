@@ -16,8 +16,8 @@ public class PersonService {
         return personRepository.save(person);
     }
 
-    public List<Person> savePersons(List<Person> persons){
-        return personRepository.saveAll(persons);
+    public List<Person> savePeople(List<Person> people){
+        return personRepository.saveAll(people);
     }
 
     public List<Person> getPersons(){

@@ -17,9 +17,9 @@ public class PersonController {
         return personService.savePerson(person);
     }
 
-    @PostMapping("/addPersons")
-    public List<Person> addPersons(@RequestBody List<Person> persons){
-        return personService.savePersons(persons);
+    @PostMapping("/addPeople")
+    public List<Person> addPeople(@RequestBody List<Person> people){
+        return personService.savePeople(people);
     }
 
     @GetMapping("/persons")

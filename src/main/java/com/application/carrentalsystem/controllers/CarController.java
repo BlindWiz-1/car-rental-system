@@ -29,22 +29,22 @@ public class CarController {
         return carService.getCarById(id);
     }
 
-    @GetMapping("/carsThatNeedRevisionBefore/{date}/{type}")
+    @GetMapping("/carsOfTypeNeedRevisionBefore/{date}/{type}")
     public List<Car> findCarsThatNeedRevisionBefore(@PathVariable String date, @PathVariable String type){
         return carService.getCarsWithTypeThatNeedReviewBefore( Date.valueOf(date), Enum.valueOf(CarType.class, type) );
     }
 
-    @GetMapping("/carsThatNeedInsuranceBefore/{date}")
+    @GetMapping("/carsNeedInsuranceBefore/{date}")
     public List<Car> findCarsThatNeedInsuranceBefore(@PathVariable String date){
         return carService.getCarsThatNeedInsuranceRenewalBefore(Date.valueOf(date));
     }
 
-    @GetMapping("/carsThatNeedRevision/{type}")
+    @GetMapping("/carsOfTypeNeedRevision/{type}")
     public List<Car> findCarsThatNeedRevision(@PathVariable String type){
         return carService.getCarsWithTypeThatNeedReview(Enum.valueOf(CarType.class, type) );
     }
 
-    @GetMapping("/carsThatNeedInsurance")
+    @GetMapping("/carsNeedInsurance")
     public List<Car> findCarsThatNeedInsurance(){
         return carService.getCarsThatNeedInsuranceRenewal();
     }
