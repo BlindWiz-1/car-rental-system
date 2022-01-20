@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 public class RentalController {
@@ -21,7 +22,7 @@ public class RentalController {
     }
 
     @GetMapping("/customers")
-    public List<Person> findCustomers(){
+    public Set<Person> findCustomers(){
         return rentalService.getCustomers();
     }
 }

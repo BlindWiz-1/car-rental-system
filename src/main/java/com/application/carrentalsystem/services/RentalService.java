@@ -13,7 +13,9 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class RentalService {
@@ -27,7 +29,6 @@ public class RentalService {
 
     public List<Car> getCarsRented(){
         LocalDate today = LocalDate.now();
-        today.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         today = today.withDayOfMonth(today.getMonth().length(today.isLeapYear()));
 
         List<Car> cars = new ArrayList<>();
@@ -38,9 +39,10 @@ public class RentalService {
         return cars;
     }
 
-    public List<Person> getCustomers(){
-        List<Person> customers = new ArrayList<>();
+    public Set<Person> getCustomers(){
+        Set<Person> customers = new LinkedHashSet<>();
         List<Rental> rentals = rentalRepository.findAll();
+
         for (Rental rental : rentals){
             customers.add(personRepository.findPersonByPersonalid(rental.getPerson().getPersonalId()));
         }
